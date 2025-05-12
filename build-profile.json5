@@ -1,0 +1,95 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "storeFile": "./SmartCockpit.p12",
+          "storePassword": "00000018A32F4FF459A272C693134D879EE8B126B2449B29F46E1E916EFA156711835793570C2E12",
+          "keyAlias": "SmartCockpit",
+          "keyPassword": "000000182E4E87F8A1B2568A10FFBD94ABEBF6BFDB9698EE998B92AB563903D7AD65BE1131D4195E",
+          "signAlg": "SHA256withECDSA",
+          "profile": "./SmartCockpitDebug.p7b",
+          "certpath": "./Smartcockpit.cer"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compatibleSdkVersion": "5.0.2(14)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "default",
+      "srcPath": "./products/default",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "utils",
+      "srcPath": "./commons/utils",
+    },
+    {
+      "name": "Home",
+      "srcPath": "./features/Home",
+    },
+    {
+      "name": "Car3d",
+      "srcPath": "./features/Car3d",
+    },
+    {
+      "name": "Music",
+      "srcPath": "./features/Music"
+    },
+    {
+      "name": "Map",
+      "srcPath": "./features/Map",
+    },
+    {
+      "name": "Setting",
+      "srcPath": "./features/Setting",
+    },
+    {
+      "name": "ConvenientCenter",
+      "srcPath": "./features/ConvenientCenter",
+    },
+    {
+      "name": "AirCondition",
+      "srcPath": "./features/AirCondition",
+    },
+    {
+      "name": "shuju",
+      "srcPath": "./features/shuju",
+    },
+    {
+      "name": "User",
+      "srcPath": "./features/User",
+    }
+  ]
+}
